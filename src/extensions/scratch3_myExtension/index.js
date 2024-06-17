@@ -18,11 +18,12 @@ class Scratch3myExtension {
     //         name: 'My Extension',
     //         blocks: [
     //             {
-    // opcode: 'getX',
-    // blockType: BlockType.REPORTER,
-    // text: 'get x',
+    //                 opcode: 'getX',
+    //                 blockType: BlockType.REPORTER,
+    //                 text: 'get x',
     //             }
-    //         ]
+    //         ], menus: {
+    //         }
     //     };
     // }
 
@@ -32,7 +33,9 @@ class Scratch3myExtension {
 
     constructor(runtime) {
         this.runtime = runtime;
+        
         this.x = '';
+
         window.addEventListener('message', (event) => {
             console.log("event", event)
             this.x = event?.data?.detail?.value ?? "";
@@ -56,7 +59,7 @@ class Scratch3myExtension {
     }
 
     getX() {
-        log.myText(this.x);
+        //log.myText(this.x);
         return this.x;
     }
 }
