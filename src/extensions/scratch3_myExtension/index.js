@@ -45,7 +45,7 @@ class Scratch3myExtension {
     getInfo() {
         return {
             id: 'myExtension',
-            name: 'My Extension',
+            name: 'CONNECT TO AITHAIGEN',
             blocks: [
                 {
                     opcode: 'getX',
